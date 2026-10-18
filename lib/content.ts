@@ -37,16 +37,19 @@ export function tool(name: string) {
 }
 
 export const navLinks = [
-  { href: "#experience", label: "Experience" },
-  { href: "#expertise", label: "Expertise" },
-  { href: "#about", label: "About" },
-  { href: "#education", label: "Education" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#expertise", label: "Expertise" },
+  { href: "/#about", label: "About" },
+  { href: "/#education", label: "Education" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/tools", label: "Tools" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export const experience = [
   {
+    id: "taxwell",
+    jumpLabel: "Taxwell",
     title: "Director, Organic Discovery",
     company: "Taxwell",
     dates: "July 2026 to Present",
@@ -69,6 +72,8 @@ export const experience = [
     ],
   },
   {
+    id: "taxact",
+    jumpLabel: "TaxAct",
     title: "SEO Manager",
     company: "TaxAct",
     dates: "May 2024 to July 2026",
@@ -87,6 +92,8 @@ export const experience = [
     ],
   },
   {
+    id: "joann",
+    jumpLabel: "JOANN",
     title: "Lead Digital Optimization, SEO & Search Specialist",
     company: "JOANN",
     dates: "March 2019 to May 2024",
@@ -109,6 +116,8 @@ export const experience = [
     ],
   },
   {
+    id: "hsn",
+    jumpLabel: "HSN",
     title: "Assistant Digital Operations Manager",
     company: "HSN",
     dates: "July 2015 to November 2016",
@@ -126,6 +135,8 @@ export const experience = [
     ],
   },
   {
+    id: "earlier-career",
+    jumpLabel: "Earlier career",
     title: "Earlier career: teaching & recruiting",
     company: "EF Education First · HSN",
     dates: "2013 to 2015",
@@ -138,6 +149,51 @@ export const experience = [
     tools: [],
   },
 ] as const;
+
+export const aiTools = [
+  tool("ChatGPT"),
+  tool("Cursor"),
+  tool("Microsoft Copilot"),
+  tool("Gemini"),
+] as const;
+
+export const extraTools = [
+  tool("Ahrefs"),
+  tool("GEO Advisor"),
+] as const;
+
+export function workTools() {
+  const bySlug = new Map<
+    string,
+    { name: string; slug: string; jobs: string[] }
+  >();
+
+  for (const role of experience) {
+    for (const item of role.tools) {
+      const current = bySlug.get(item.slug) ?? {
+        name: item.name,
+        slug: item.slug,
+        jobs: [],
+      };
+      if (!current.jobs.includes(role.jumpLabel)) {
+        current.jobs.push(role.jumpLabel);
+      }
+      bySlug.set(item.slug, current);
+    }
+  }
+
+  for (const item of extraTools) {
+    if (!bySlug.has(item.slug)) {
+      bySlug.set(item.slug, {
+        name: item.name,
+        slug: item.slug,
+        jobs: ["Search research"],
+      });
+    }
+  }
+
+  return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
 
 export const expertise = [
   {

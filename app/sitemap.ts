@@ -9,5 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${site.url}/tools`,
+      lastModified: "2026-10-18",
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 }

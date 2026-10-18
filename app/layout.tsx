@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import { JsonLd } from "@/components/json-ld";
 import { Providers } from "@/components/providers";
 import { site } from "@/lib/content";
 import "./globals.css";
@@ -26,9 +25,6 @@ export const metadata: Metadata = {
   keywords: [...site.keywords],
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -66,7 +62,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        <JsonLd />
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import {
   ArrowRight,
@@ -17,15 +18,22 @@ import {
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { FaqSection } from "@/components/faq-section";
+import { JsonLd } from "@/components/json-ld";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
 import { SocialButtons } from "@/components/social-links";
 import {
   experience,
   expertise,
-  navLinks,
   site,
   toolkit,
 } from "@/lib/content";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const expertiseIcons = {
   search: Search,
@@ -61,6 +69,7 @@ function StarMark({
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <SiteNavbar />
       <main>
         <section id="top" className="section hero-glow pt-6 pb-6">
@@ -179,17 +188,50 @@ export default function Home() {
 
         <section id="experience" className="section">
           <div className="container">
-            <div className="mb-6" style={{ maxWidth: "40rem" }}>
-              <h2 className="title is-2">Experience</h2>
-              <p className="subtitle is-6 has-text-grey mt-3">
-                A career built inside enterprise teams, learning complex businesses,
-                making digital experiences easier to find, and bringing other
-                people along for the work.
-              </p>
+            <div className="mb-6">
+              <div style={{ maxWidth: "40rem" }}>
+                <h2 className="title is-2">Experience</h2>
+                <p className="subtitle is-6 has-text-grey mt-3">
+                  A career built inside enterprise teams, learning complex businesses,
+                  making digital experiences easier to find, and bringing other
+                  people along for the work.
+                </p>
+              </div>
+              <div className="experience-index mt-5">
+                <div>
+                  <span className="experience-tools-label">Jobs</span>
+                  <div className="tags">
+                    {experience.map((role) => (
+                      <a
+                        key={role.id}
+                        href={`#${role.id}`}
+                        className="tag is-rounded experience-job-link"
+                      >
+                        {role.jumpLabel}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <span className="experience-tools-label">Tools</span>
+                  <div className="tags">
+                    <a href="/tools" className="tag is-rounded experience-tool">
+                      All tools
+                    </a>
+                    <a href="/tools#ai-tools" className="tag is-rounded experience-tool">
+                      AI tools
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="experience-list">
               {experience.map((role) => (
-                <article key={role.title} className="box experience-item">
+                <article
+                  key={role.id}
+                  id={role.id}
+                  className="box experience-item"
+                >
                   <div className="experience-marker" aria-hidden="true">
                     <BriefcaseBusiness size={20} />
                   </div>
@@ -219,12 +261,13 @@ export default function Home() {
                         <span className="experience-tools-label">Tools</span>
                         <div className="tags">
                           {role.tools.map((item) => (
-                            <span
+                            <a
                               key={item.slug}
+                              href={`/tools#${item.slug}`}
                               className="tag is-rounded experience-tool"
                             >
                               {item.name}
-                            </span>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -445,66 +488,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer
-        className="footer"
-        style={{ borderTop: "1px solid var(--bulma-border-weak)" }}
-      >
-        <div className="container">
-          <div
-            className="is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center"
-            style={{ gap: "1.5rem" }}
-          >
-            <div
-              className="is-flex is-align-items-center has-text-weight-semibold"
-              style={{ gap: "0.5rem" }}
-            >
-              <span
-                style={{
-                  position: "relative",
-                  width: 32,
-                  height: 32,
-                  display: "inline-block",
-                  borderRadius: 9999,
-                  overflow: "hidden",
-                  boxShadow:
-                    "0 0 0 2px color-mix(in srgb, var(--brand) 35%, transparent)",
-                }}
-              >
-                <Image
-                  src="/nav-headshot.jpg"
-                  alt={site.name}
-                  fill
-                  sizes="32px"
-                  style={{ objectFit: "cover" }}
-                />
-              </span>
-              {site.name}
-            </div>
-            <nav className="is-flex is-flex-wrap-wrap" style={{ gap: "1.25rem" }}>
-              {navLinks.map((link) => (
-                <a key={link.href} className="has-text-grey" href={link.href}>
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-            <div className="is-flex" style={{ gap: "1rem" }}>
-              <a href={site.github} className="has-text-grey">
-                GitHub
-              </a>
-              <a href={site.linkedin} className="has-text-grey">
-                LinkedIn
-              </a>
-              <a href={`mailto:${site.email}`} className="has-text-grey">
-                Email
-              </a>
-            </div>
-          </div>
-          <p className="has-text-centered has-text-grey is-size-7 mt-5">
-            © 2026 {site.name}. Search experience, curious
-            leadership, and practical AI.
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

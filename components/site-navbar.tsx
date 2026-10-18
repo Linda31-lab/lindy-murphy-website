@@ -22,7 +22,7 @@ export function SiteNavbar() {
     >
       <div className="container">
         <div className="navbar-brand">
-          <a className="navbar-item" href="#top" onClick={() => setOpen(false)}>
+          <a className="navbar-item" href="/" onClick={() => setOpen(false)}>
             <span className="nav-avatar">
               <Image
                 src="/nav-headshot.jpg"
@@ -70,7 +70,7 @@ export function SiteNavbar() {
                 <ThemeToggle />
                 <a
                   className="button is-primary is-rounded"
-                  href="#contact"
+                  href="/#contact"
                   onClick={() => setOpen(false)}
                 >
                   <strong>Get in touch</strong>

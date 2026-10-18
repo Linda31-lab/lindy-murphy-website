@@ -191,11 +191,40 @@ html[data-theme="dark"] {
   max-width: 64rem;
 }
 
+.experience-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+}
+
+.experience-job-link,
+a.experience-tool {
+  color: inherit;
+  text-decoration: none;
+}
+
+.experience-job-link:hover,
+a.experience-tool:hover {
+  border-color: color-mix(in srgb, var(--brand) 45%, var(--bulma-border-weak));
+  color: var(--brand);
+}
+
 .experience-item {
+  scroll-margin-top: 5.5rem;
   border-radius: 1.4rem;
   gap: 1.25rem;
   padding: 1.5rem;
   display: flex;
+}
+
+.tool-card {
+  scroll-margin-top: 5.5rem;
+  border-radius: 1.4rem;
+  height: 100%;
+}
+
+.ai-tool-card {
+  border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--bulma-border-weak));
 }
 
 .experience-item + .experience-item {

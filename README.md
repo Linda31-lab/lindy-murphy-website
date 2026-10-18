@@ -11,6 +11,7 @@ The interesting SEO is in the implementation, not in a long essay:
 - Title, description, and canonical: `app/layout.tsx` + `lib/content.ts`
 - robots and sitemap: `app/robots.ts`, `app/sitemap.ts`
 - Person / WebSite / FAQPage JSON-LD: `components/json-ld.tsx` (FAQ copy lives in `lib/content.ts`)
+- Tools page: `app/tools/page.tsx`
 - How I think about this site: [`docs/seo.md`](docs/seo.md)
 - Launch checklist I actually use: [`docs/launch-checklist.md`](docs/launch-checklist.md)
 - Search Console steps: [`docs/search-console.md`](docs/search-console.md)

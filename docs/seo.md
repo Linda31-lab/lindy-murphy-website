@@ -18,7 +18,7 @@ This is a one-page personal site. The job is not to rank for hundreds of keyword
 | --- | --- |
 | Title, meta description, canonical, robots | `app/layout.tsx`, `lib/content.ts` |
 | `robots.txt` | `app/robots.ts` → https://lindymurphy.com/robots.txt |
-| XML sitemap | `app/sitemap.ts` → https://lindymurphy.com/sitemap.xml |
+| XML sitemap | `app/sitemap.ts` → https://lindymurphy.com/sitemap.xml (includes `/tools`) |
 | Person, WebSite, and FAQPage JSON-LD | `components/json-ld.tsx`, `lib/content.ts` (`faqs`) |
 | Visible copy | `lib/content.ts`, `app/page.tsx` |
 | Search Console verification | `lib/content.ts` (`googleSiteVerification`) or `GOOGLE_SITE_VERIFICATION` |
