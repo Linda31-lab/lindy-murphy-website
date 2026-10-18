@@ -228,6 +228,25 @@ html[data-theme="dark"] {
   margin-top: 0.4rem;
 }
 
+.experience-tools {
+  margin-top: 0.9rem;
+}
+
+.experience-tools-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.experience-tool {
+  border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--bulma-border-weak));
+  background: color-mix(in srgb, var(--brand) 8%, var(--bulma-scheme-main));
+}
+
 .credential-card {
   border-radius: 1.4rem;
   height: 100%;

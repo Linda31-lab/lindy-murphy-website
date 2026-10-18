@@ -214,6 +214,21 @@ export default function Home() {
                     {"note" in role && role.note ? (
                       <p className="is-size-7 has-text-grey mt-3">{role.note}</p>
                     ) : null}
+                    {role.tools.length > 0 ? (
+                      <div className="experience-tools">
+                        <span className="experience-tools-label">Tools</span>
+                        <div className="tags">
+                          {role.tools.map((item) => (
+                            <span
+                              key={item.slug}
+                              className="tag is-rounded experience-tool"
+                            >
+                              {item.name}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 </article>
               ))}

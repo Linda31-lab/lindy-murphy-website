@@ -26,6 +26,16 @@ export const site = {
   ],
 };
 
+export function tool(name: string) {
+  return {
+    name,
+    slug: name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, ""),
+  };
+}
+
 export const navLinks = [
   { href: "#experience", label: "Experience" },
   { href: "#expertise", label: "Expertise" },
@@ -47,6 +57,18 @@ export const experience = [
       "Technical SEO, content strategy, reputation, analytics, and cross-functional leadership",
       "AI ambassador helping teams test and adopt useful workflows",
     ],
+    tools: [
+      tool("Google Search Console"),
+      tool("Google Analytics"),
+      tool("Looker Studio"),
+      tool("Semrush"),
+      tool("Ahrefs"),
+      tool("GEO Advisor"),
+      tool("ChatGPT"),
+      tool("Cursor"),
+      tool("Microsoft Copilot"),
+      tool("Gemini"),
+    ],
   },
   {
     title: "SEO Manager",
@@ -58,6 +80,12 @@ export const experience = [
       "Owned roadmap execution across on-page, technical, internal linking, backlinks, and content",
       "Conducted keyword research, competitive analysis, site audits, and performance reporting",
       "Planned and evaluated SEO tests while advocating for search across internal teams",
+    ],
+    tools: [
+      tool("Google Search Console"),
+      tool("Google Analytics"),
+      tool("Looker Studio"),
+      tool("Semrush"),
     ],
   },
   {
@@ -72,6 +100,14 @@ export const experience = [
       "Turned Google analytics and search data into reporting and recommendations for business teams",
     ],
     note: "Previously held digital optimization and ecommerce content roles at JOANN beginning in 2016.",
+    tools: [
+      tool("Salesforce"),
+      tool("Google Analytics"),
+      tool("Plumslice"),
+      tool("SiteSpect"),
+      tool("Google Optimize"),
+      tool("Constructor"),
+    ],
   },
   {
     title: "Assistant Digital Operations Manager",
@@ -82,6 +118,12 @@ export const experience = [
     highlights: [
       "Recognized with a Vision Award for adaptability and cross-team collaboration",
       "Built an early foundation in enterprise content operations and process improvement",
+    ],
+    tools: [
+      tool("Content management systems"),
+      tool("Web publishing"),
+      tool("Android"),
+      tool("iOS"),
     ],
   },
   {
@@ -94,6 +136,7 @@ export const experience = [
       "Taught written and spoken English to students and adults in Jinhua, China",
       "Managed behavioral interviews, high-volume recruiting, and candidate communication at HSN",
     ],
+    tools: [],
   },
 ] as const;
 
