@@ -191,7 +191,7 @@ export const faqs = [
   {
     question: "How do you measure whether AEO or GEO work is landing?",
     answer:
-      "I do not hang the whole story on one dashboard. Search Console still tells me what Google is showing and what people actually type. Then I pull in Semrush, Ahrefs, GEO Advisor, and other keyword or AI-visibility trackers, because the way we benchmark this is still getting sorted out. I look for overlap: are we showing up, are we being cited, is the brand described accurately, and does that line up with the journeys that create revenue or trust. When the tools disagree, that is useful too. It usually means the measurement is young, not that one platform has the truth.",
+      "I try to pull it into a comprehensive view that can help us tell the whole story. Search Console still tells me what Google is showing and what people actually type. Then I bring in Semrush, Ahrefs, GEO Advisor, and other keyword or AI-visibility trackers, because the way we benchmark this is still getting sorted out. I look for overlap: are we showing up, are we being cited, is the brand described accurately, and does that line up with the journeys that create revenue or trust. When the tools disagree, that is useful too. It usually means the measurement is young, not that one platform has the truth.",
   },
   {
     question: "Your SEO career is longer than your AI career. How do you talk about that?",
