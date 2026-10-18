@@ -10,9 +10,9 @@ export const site = {
    * GOOGLE_SITE_VERIFICATION in the environment instead of editing this.
    */
   googleSiteVerification: "",
-  title: "Lindy Murphy — Enterprise organic discovery, with practical AI enablement.",
+  title: "Lindy Murphy: Enterprise organic discovery, with practical AI enablement.",
   description:
-    "Organic discovery leader with enterprise experience at Taxwell, TaxAct, and JOANN. I lead SEO, content, search, and analytics work—and help teams adopt useful AI workflows.",
+    "Organic discovery leader with enterprise experience at Taxwell, TaxAct, and JOANN. I lead SEO, content, search, and analytics work, and help teams adopt useful AI workflows.",
   keywords: [
     "Lindy Murphy",
     "Organic Discovery",
@@ -38,9 +38,9 @@ export const experience = [
   {
     title: "Director, Organic Discovery",
     company: "Taxwell",
-    dates: "July 2026 — Present",
+    dates: "July 2026 to Present",
     summary:
-      "Lead enterprise organic discovery strategy across TaxAct, Drake Software, and 1040.com—helping customers find and trust the brands wherever they search for answers.",
+      "Lead enterprise organic discovery strategy across TaxAct, Drake Software, and 1040.com, helping customers find and trust the brands wherever they search for answers.",
     highlights: [
       "Search strategy across traditional search, AI assistants, communities, and review platforms",
       "Technical SEO, content strategy, reputation, analytics, and cross-functional leadership",
@@ -50,7 +50,7 @@ export const experience = [
   {
     title: "SEO Manager",
     company: "TaxAct",
-    dates: "May 2024 — July 2026",
+    dates: "May 2024 to July 2026",
     summary:
       "Executed a comprehensive SEO strategy aligned with business goals and partnered across content, development, paid search, leadership, and agency teams.",
     highlights: [
@@ -62,7 +62,7 @@ export const experience = [
   {
     title: "Lead Digital Optimization, SEO & Search Specialist",
     company: "JOANN",
-    dates: "March 2019 — May 2024",
+    dates: "March 2019 to May 2024",
     summary:
       "Led SEO, on-site search, taxonomy, reviews, customer feedback, and experimentation for a large enterprise ecommerce business.",
     highlights: [
@@ -75,7 +75,7 @@ export const experience = [
   {
     title: "Assistant Digital Operations Manager",
     company: "HSN",
-    dates: "July 2015 — November 2016",
+    dates: "July 2015 to November 2016",
     summary:
       "Connected digital art direction and site production, managed multiple content systems, and coordinated accurate publishing across web, Android, and iOS.",
     highlights: [
@@ -86,7 +86,7 @@ export const experience = [
   {
     title: "Earlier career: teaching & recruiting",
     company: "EF Education First · HSN",
-    dates: "2013 — 2015",
+    dates: "2013 to 2015",
     summary:
       "Built the communication and adaptability skills that still shape how I lead, coach, and work across different kinds of teams.",
     highlights: [
@@ -129,7 +129,7 @@ export const expertise = [
   },
   {
     title: "AI enablement & training",
-    body: "Hands-on sessions that help colleagues use ChatGPT, Cursor, Copilot, and Gemini in ways that fit their actual work—not a generic demo they forget tomorrow.",
+    body: "Hands-on sessions that help colleagues use ChatGPT, Cursor, Copilot, and Gemini in ways that fit their actual work, not a generic demo they forget tomorrow.",
     icon: "megaphone" as const,
     color: "hsl(205, 80%, 52%)",
   },

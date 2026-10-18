@@ -29,7 +29,7 @@ export function ContactForm() {
 
     const subject = encodeURIComponent(`Message from ${name}`);
     const body = encodeURIComponent(
-      `${message}\n\n— ${name}\n${email}`,
+      `${message}\n\n- ${name}\n${email}`,
     );
     const mailto = `mailto:${site.email}?subject=${subject}&body=${body}`;
 

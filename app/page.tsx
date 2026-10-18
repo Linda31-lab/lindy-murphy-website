@@ -181,7 +181,7 @@ export default function Home() {
             <div className="mb-6" style={{ maxWidth: "40rem" }}>
               <h2 className="title is-2">Experience</h2>
               <p className="subtitle is-6 has-text-grey mt-3">
-                A career built inside enterprise teams—learning complex businesses,
+                A career built inside enterprise teams, learning complex businesses,
                 making digital experiences easier to find, and bringing other
                 people along for the work.
               </p>
@@ -262,7 +262,7 @@ export default function Home() {
               <div className="column is-6">
                 <h2 className="title is-2">About me</h2>
                 <p className="has-text-grey mt-4">
-                  I&apos;m Lindy—a positive, curious leader with more than 13 years
+                  I&apos;m Lindy, a positive, curious leader with more than 13 years
                   across digital operations, ecommerce, content, search, and organic
                   discovery. I&apos;ve grown inside enterprise businesses including
                   HSN, JOANN, TaxAct, and Taxwell, where the work depends on strong
@@ -271,7 +271,7 @@ export default function Home() {
                 <p className="has-text-grey mt-4">
                   My AI experience is newer than my search career, and I&apos;m not
                   interested in pretending otherwise. I&apos;ve been learning fast
-                  and furiously—working hands-on in ChatGPT, Cursor, Copilot, and
+                  and furiously, working hands-on in ChatGPT, Cursor, Copilot, and
                   Gemini, then leading practical sessions so colleagues can apply
                   what works to their own roles and workflows.
                 </p>
@@ -346,12 +346,12 @@ export default function Home() {
                     <p>
                       <strong>Bachelor of Communications</strong>
                       <br />
-                      Western Michigan University · 2010–2012
+                      Western Michigan University, 2010 to 2012
                     </p>
                     <p>
                       <strong>Business Administration &amp; Management</strong>
                       <br />
-                      Southwestern Michigan College · 2008–2010
+                      Southwestern Michigan College, 2008 to 2010
                     </p>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ export default function Home() {
                 <p className="has-text-grey mt-4" style={{ maxWidth: "28rem" }}>
                   I&apos;m always glad to talk about organic discovery, enterprise
                   search, team leadership, or practical AI enablement. Drop me a
-                  line and I&apos;ll write back—like a real human.
+                  line and I&apos;ll write back, like a real human.
                 </p>
                 <div className="mt-5">
                   <a

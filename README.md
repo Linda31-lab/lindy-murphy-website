@@ -1,6 +1,6 @@
 # Lindy Murphy
 
-Personal site for [lindymurphy.com](https://lindymurphy.com) — enterprise organic discovery, with practical AI enablement.
+Personal site for [lindymurphy.com](https://lindymurphy.com): enterprise organic discovery, with practical AI enablement.
 
 This repo is a Next.js copy of the live site so it can be edited here and published back to Vercel.
 
