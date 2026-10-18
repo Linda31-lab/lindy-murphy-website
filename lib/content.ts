@@ -31,6 +31,7 @@ export const navLinks = [
   { href: "#expertise", label: "Expertise" },
   { href: "#about", label: "About" },
   { href: "#education", label: "Education" },
+  { href: "#faq", label: "FAQ" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -150,4 +151,49 @@ export const toolkit = [
   "Microsoft Copilot",
   "Gemini",
   "AI Enablement",
+  "AEO",
+  "GEO",
+] as const;
+
+export const faqs = [
+  {
+    question: "How do you actually use AI in your work?",
+    answer:
+      "I use ChatGPT, Cursor, Copilot, and Gemini on work I already have, not as a side demo. That looks like drafting and tightening content, summarizing search data, checking technical notes, and building small examples a teammate can reuse. The model is a fast first pass. I still own the strategy, the facts, and whether the output is something a team can ship.",
+  },
+  {
+    question: "What is the difference between SEO, AEO, and GEO?",
+    answer:
+      "SEO is how people find you in traditional search. AEO, answer engine optimization, is how clearly you can be pulled into a direct answer in Google, assistants, and Q&A experiences. GEO, generative engine optimization, is how often and how accurately AI systems cite or describe your brand when they write an answer. I treat them as one organic discovery system. The surfaces changed. The work still starts with entities, evidence, and useful content.",
+  },
+  {
+    question: "How are you optimizing for answer engines and generative search?",
+    answer:
+      "I make the facts easy to extract. Clear titles, a clean heading outline, schema that matches the page, and answers written the way a person would ask the question. On a personal site that means saying who I am, what I do, and how I work in plain language, then marking it up. On enterprise brands it is the same idea at scale: consistent names, trustworthy pages, and content that can be quoted without guessing.",
+  },
+  {
+    question: "How do you teach a team to use AI so it sticks?",
+    answer:
+      "I sit in their workflow. We pick a task they already do, try the tool on that task, and keep only what saves time or improves quality. I do not start with a long overview of every model. If people cannot reuse it on Monday, it was a demo, not enablement.",
+  },
+  {
+    question: "What stays true when people get answers from AI instead of a list of links?",
+    answer:
+      "People still have to trust the brand they hear about. Technical health, clear content, internal linking, and measurement still matter. If the site is thin, contradictory, or hard to parse, an answer engine will skip it or get it wrong. Rankings were never the whole job. Being understood is.",
+  },
+  {
+    question: "How do you keep AI useful in a high-stakes category like tax?",
+    answer:
+      "I do not let a model invent policy, prices, or advice. AI helps with research, drafting, clustering, QA checklists, and internal how-tos. Anything customer-facing still goes through the same accuracy and brand review you would use without AI. In a trust category, speed is useless if the answer is wrong.",
+  },
+  {
+    question: "How do you measure whether AEO or GEO work is landing?",
+    answer:
+      "I still start with Search Console, the queries that matter, and the journeys that create revenue or trust. On top of that I look at whether the brand is described accurately in AI answers, whether the right URLs are cited, and whether someone who asked an assistant can still reach a page that helps. The reporting is messier than a blue-link dashboard. I would rather track a few honest signals than invent a vanity AI score.",
+  },
+  {
+    question: "Your SEO career is longer than your AI career. How do you talk about that?",
+    answer:
+      "Directly. I have more than a decade in enterprise digital, content, and SEO. AI is the newer skill, and I have been learning it by doing the work and teaching it in the same week. That mix is the point: I can connect a new tool to a real search, content, or analytics problem instead of treating AI as a separate hobby.",
+  },
 ] as const;

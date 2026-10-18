@@ -238,6 +238,42 @@ html[data-theme="dark"] {
   padding: 1.25rem;
 }
 
+.faq-item {
+  border-radius: 1.2rem;
+}
+
+.faq-item + .faq-item {
+  margin-top: 0.75rem;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item .chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.faq-item .faq-answer {
+  margin-top: 0.85rem;
+  padding-right: 2rem;
+}
+
 @keyframes float-slow {
   0%,
   to {

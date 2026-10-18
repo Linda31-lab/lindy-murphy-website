@@ -19,7 +19,7 @@ This is a one-page personal site. The job is not to rank for hundreds of keyword
 | Title, meta description, canonical, robots | `app/layout.tsx`, `lib/content.ts` |
 | `robots.txt` | `app/robots.ts` → https://lindymurphy.com/robots.txt |
 | XML sitemap | `app/sitemap.ts` → https://lindymurphy.com/sitemap.xml |
-| Person and WebSite JSON-LD | `components/json-ld.tsx` |
+| Person, WebSite, and FAQPage JSON-LD | `components/json-ld.tsx`, `lib/content.ts` (`faqs`) |
 | Visible copy | `lib/content.ts`, `app/page.tsx` |
 | Search Console verification | `lib/content.ts` (`googleSiteVerification`) or `GOOGLE_SITE_VERIFICATION` |
 | Launch steps | `docs/launch-checklist.md` |
@@ -39,8 +39,9 @@ Edit copy in `lib/content.ts` first. Title and description used in Google are th
 
 - `Person`: name, job title, email, image, LinkedIn, GitHub
 - `WebSite`: name, URL, description, language
+- `FAQPage`: interview-style questions on AI use, AEO, and GEO. The JSON-LD is generated from the same `faqs` array as the visible `#faq` section, so schema cannot drift from the page.
 
-That is enough for a personal site. I did not add `FAQPage`, `Article`, or fake review markup.
+I did not add `Article` or review markup. FAQ schema is only used because the questions are on the page.
 
 **On-page.** One `h1`. Section headings (`h2`/`h3`) match the page outline. Internal links are in-page anchors (`#experience`, `#contact`). Images have descriptive `alt` text.
 

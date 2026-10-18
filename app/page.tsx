@@ -16,6 +16,7 @@ import {
   Users,
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { FaqSection } from "@/components/faq-section";
 import { SiteNavbar } from "@/components/site-navbar";
 import { SocialButtons } from "@/components/social-links";
 import {
@@ -382,7 +383,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="section">
+        <FaqSection />
+
+        <section id="contact" className="section section-alt">
           <div className="container">
             <div className="columns is-variable is-8">
               <div className="column is-5">
