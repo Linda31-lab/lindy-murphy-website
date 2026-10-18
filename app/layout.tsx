@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { JsonLd } from "@/components/json-ld";
 import { Providers } from "@/components/providers";
 import { site } from "@/lib/content";
 import "./globals.css";
+
+const googleVerification =
+  process.env.GOOGLE_SITE_VERIFICATION || site.googleSiteVerification;
 
 const inter = Inter({
   variable: "--font-sans",
@@ -16,16 +20,27 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lindymurphy.com"),
+  metadataBase: new URL(site.url),
   title: site.title,
   description: site.description,
   keywords: [...site.keywords],
-  authors: [{ name: site.name, url: "https://lindymurphy.com" }],
+  authors: [{ name: site.name, url: site.url }],
   creator: site.name,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: site.title,
     description: site.description,
-    url: "https://lindymurphy.com",
+    url: site.url,
     siteName: site.name,
     type: "website",
   },
@@ -34,6 +49,9 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
   },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
 };
 
 export default function RootLayout({
@@ -48,6 +66,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <JsonLd />
         <Providers>{children}</Providers>
       </body>
     </html>

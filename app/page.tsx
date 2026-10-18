@@ -482,7 +482,7 @@ export default function Home() {
             </div>
           </div>
           <p className="has-text-centered has-text-grey is-size-7 mt-5">
-            © {new Date().getFullYear()} {site.name}. Search experience, curious
+            © 2026 {site.name}. Search experience, curious
             leadership, and practical AI.
           </p>
         </div>

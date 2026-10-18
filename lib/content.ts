@@ -1,9 +1,15 @@
 export const site = {
   name: "Lindy Murphy",
+  url: "https://lindymurphy.com",
   role: "Director, Organic Discovery · AI Ambassador",
   email: "lindymurphy3@gmail.com",
   github: "https://github.com/Linda31-lab",
   linkedin: "https://www.linkedin.com/in/lindy-murphy-44192750",
+  /**
+   * HTML-tag content from Google Search Console. You can also set
+   * GOOGLE_SITE_VERIFICATION in the environment instead of editing this.
+   */
+  googleSiteVerification: "",
   title: "Lindy Murphy — Enterprise organic discovery, with practical AI enablement.",
   description:
     "Organic discovery leader with enterprise experience at Taxwell, TaxAct, and JOANN. I lead SEO, content, search, and analytics work—and help teams adopt useful AI workflows.",
