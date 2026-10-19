@@ -20,8 +20,6 @@ export function generateStaticParams() {
   return toolGuides.map((item) => ({ slug: item.slug }));
 }
 
-export const dynamicParams = false;
-
 export async function generateMetadata({
   params,
 }: ToolPageProps): Promise<Metadata> {
