@@ -4,10 +4,12 @@ import type { ToolGuide } from "@/lib/tool-guides";
 
 export function ToolJsonLd({ tool }: { tool: ToolGuide }) {
   const url = `${site.url}/tools/${tool.slug}`;
+  const aboutId = `${url}#about`;
   const about =
     tool.kind === "software"
       ? {
           "@type": "SoftwareApplication",
+          "@id": aboutId,
           name: tool.name,
           applicationCategory: tool.applicationCategory ?? "BusinessApplication",
           operatingSystem: "Web",
@@ -16,6 +18,7 @@ export function ToolJsonLd({ tool }: { tool: ToolGuide }) {
         }
       : {
           "@type": "DefinedTerm",
+          "@id": aboutId,
           name: tool.name,
           description: tool.whatItDoes[0],
           url,
@@ -24,6 +27,7 @@ export function ToolJsonLd({ tool }: { tool: ToolGuide }) {
   const graph = {
     "@context": "https://schema.org",
     "@graph": [
+      about,
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -58,7 +62,7 @@ export function ToolJsonLd({ tool }: { tool: ToolGuide }) {
           name: site.name,
           url: site.url,
         },
-        about,
+        about: { "@id": aboutId },
         breadcrumb: {
           "@type": "BreadcrumbList",
         },
@@ -82,7 +86,7 @@ export function ToolJsonLd({ tool }: { tool: ToolGuide }) {
           url: site.url,
           jobTitle: site.role,
         },
-        about,
+        about: { "@id": aboutId },
       },
       {
         "@type": "FAQPage",
