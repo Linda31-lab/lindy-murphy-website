@@ -9,6 +9,7 @@ export const site = {
    * HTML-tag content from Google Search Console. You can also set
    * GOOGLE_SITE_VERIFICATION in the environment instead of editing this.
    */
+  updated: "2026-10-19",
   googleSiteVerification: "",
   title: "Lindy Murphy: Enterprise organic discovery, with practical AI enablement.",
   description:
@@ -193,6 +194,17 @@ export function workTools() {
   }
 
   return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
+}
+
+export function roleHref(jumpLabel: string) {
+  if (jumpLabel === "AI toolkit") {
+    return "/tools#ai-tools";
+  }
+  if (jumpLabel === "Search research") {
+    return "/tools#work-tools";
+  }
+  const role = experience.find((item) => item.jumpLabel === jumpLabel);
+  return role ? `/#${role.id}` : "/#experience";
 }
 
 export const expertise = [

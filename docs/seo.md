@@ -6,7 +6,7 @@ The live site is the source of truth for content. This file is the source of tru
 
 ## What I optimized for
 
-This is a one-page personal site. The job is not to rank for hundreds of keywords. The job is:
+This is a personal site with a homepage plus a tools directory. The job is not to rank for hundreds of keywords. The job is:
 
 1. Be findable as **Lindy Murphy** and for organic discovery / enterprise SEO leadership.
 2. Make it easy for Google, people, and AI assistants to understand who I am and what I do.
@@ -18,9 +18,10 @@ This is a one-page personal site. The job is not to rank for hundreds of keyword
 | --- | --- |
 | Title, meta description, canonical, robots | `app/layout.tsx`, `lib/content.ts` |
 | `robots.txt` | `app/robots.ts` → https://lindymurphy.com/robots.txt |
-| XML sitemap | `app/sitemap.ts` → https://lindymurphy.com/sitemap.xml (includes `/tools`) |
+| XML sitemap | `app/sitemap.ts` → https://lindymurphy.com/sitemap.xml (homepage, `/tools`, and every `/tools/[slug]`) |
 | Person, WebSite, and FAQPage JSON-LD | `components/json-ld.tsx`, `lib/content.ts` (`faqs`) |
-| Visible copy | `lib/content.ts`, `app/page.tsx` |
+| Tool pages, FAQs, and schema | `lib/tool-guides.ts`, `app/tools/[slug]/page.tsx`, `components/tool-json-ld.tsx` |
+| Visible copy | `lib/content.ts`, `lib/tool-guides.ts`, `app/page.tsx` |
 | Search Console verification | `lib/content.ts` (`googleSiteVerification`) or `GOOGLE_SITE_VERIFICATION` |
 | Launch steps | `docs/launch-checklist.md` |
 | Search Console property setup | `docs/search-console.md` |
@@ -31,7 +32,7 @@ Edit copy in `lib/content.ts` first. Title and description used in Google are th
 
 **URL.** Canonical host is `https://lindymurphy.com` (HTTPS, no `www`). The sitemap, robots `Host`, Open Graph URL, and JSON-LD `url` all use that origin.
 
-**Indexation.** The homepage is `index, follow`. `robots.txt` allows `/` and points to the sitemap. There is no blog, so the sitemap has one URL.
+**Indexation.** Pages are `index, follow`. `robots.txt` allows `/` and points to the sitemap. The sitemap includes the homepage, `/tools`, and a URL for each tool page.
 
 **Title and description.** Written for humans first, then search. They name who I am and the work I do. They do not stuff keywords. I do not use em dashes in titles, descriptions, or page copy.
 
@@ -40,12 +41,14 @@ Edit copy in `lib/content.ts` first. Title and description used in Google are th
 - `Person`: name, job title, email, image, LinkedIn, GitHub
 - `WebSite`: name, URL, description, language
 - `FAQPage`: interview-style questions on AI use, AEO, and GEO. The JSON-LD is generated from the same `faqs` array as the visible `#faq` section, so schema cannot drift from the page.
+- Tool pages add `WebPage`, `TechArticle`, `FAQPage`, `BreadcrumbList`, and either `SoftwareApplication` or `DefinedTerm`, generated from `lib/tool-guides.ts`.
+- `/tools` adds `CollectionPage`, `ItemList`, and `BreadcrumbList` for the directory.
 
-I did not add `Article` or review markup. FAQ schema is only used because the questions are on the page.
+I did not add review markup. FAQ schema is only used because the questions are on the page.
 
-**On-page.** One `h1`. Section headings (`h2`/`h3`) match the page outline. Internal links are in-page anchors (`#experience`, `#contact`). Images have descriptive `alt` text.
+**On-page.** One `h1` per page. Section headings (`h2`/`h3`) match the page outline. Internal links connect the homepage, `/tools`, and each tool URL. Images have descriptive `alt` text.
 
-**What I skipped on purpose.** No keyword-stuffed blog, no auto-generated pages, no hidden text, no `hreflang` (English only), no client-side-only content that crawlers would miss.
+**What I skipped on purpose.** No keyword-stuffed blog, no hidden text, no `hreflang` (English only), no client-side-only content that crawlers would miss. Tool pages are hand-written from real work, not auto-generated fluff.
 
 ## If I were auditing this like a client site
 

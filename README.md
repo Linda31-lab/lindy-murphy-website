@@ -11,7 +11,8 @@ The interesting SEO is in the implementation, not in a long essay:
 - Title, description, and canonical: `app/layout.tsx` + `lib/content.ts`
 - robots and sitemap: `app/robots.ts`, `app/sitemap.ts`
 - Person / WebSite / FAQPage JSON-LD: `components/json-ld.tsx` (FAQ copy lives in `lib/content.ts`)
-- Tools page: `app/tools/page.tsx`
+- Tools directory: `app/tools/page.tsx`
+- One URL per tool, with FAQs and schema: `app/tools/[slug]/page.tsx` + `lib/tool-guides.ts`
 - How I think about this site: [`docs/seo.md`](docs/seo.md)
 - Launch checklist I actually use: [`docs/launch-checklist.md`](docs/launch-checklist.md)
 - Search Console steps: [`docs/search-console.md`](docs/search-console.md)
@@ -29,6 +30,6 @@ Open [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
 ## Edit the content
 
-Most copy lives in `lib/content.ts` (experience, expertise, toolkit, contact details). Layout and sections are in `app/page.tsx`. Photos are in `public/`.
+Most copy lives in `lib/content.ts` (experience, expertise, toolkit, contact details). Tool explanations, FAQs, and related links live in `lib/tool-guides.ts`. Layout and sections are in `app/page.tsx`. Photos are in `public/`.
 
 The contact form opens your email app to `lindymurphy3@gmail.com`.

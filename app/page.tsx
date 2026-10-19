@@ -263,7 +263,7 @@ export default function Home() {
                           {role.tools.map((item) => (
                             <a
                               key={item.slug}
-                              href={`/tools#${item.slug}`}
+                              href={`/tools/${item.slug}`}
                               className="tag is-rounded experience-tool"
                             >
                               {item.name}

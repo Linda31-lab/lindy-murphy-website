@@ -322,6 +322,31 @@ a.experience-tool:hover {
   padding-right: 2rem;
 }
 
+.tool-card-link {
+  display: block;
+  color: inherit;
+  height: 100%;
+}
+
+.tool-card-link:hover {
+  text-decoration: none;
+  box-shadow: 0 0.75rem 2rem
+    color-mix(in srgb, var(--brand) 16%, transparent);
+}
+
+.tool-breadcrumb {
+  margin-bottom: 1.25rem;
+}
+
+.tool-breadcrumb a {
+  color: var(--brand);
+}
+
+.tool-prose p {
+  max-width: 40rem;
+  line-height: 1.65;
+}
+
 @keyframes float-slow {
   0%,
   to {

@@ -17,7 +17,8 @@ The same list I use on this site. Copy it for another property and replace the U
 
 ## After deploy
 
-- [ ] Fetch `/`, `/robots.txt`, `/sitemap.xml` on the live host.
+- [ ] Fetch `/`, `/tools`, a sample `/tools/[slug]`, `/robots.txt`, and `/sitemap.xml` on the live host.
+- [ ] Confirm the sitemap lists the homepage, `/tools`, and every tool URL.
 - [ ] View source: title, description, canonical, and JSON-LD match the repo.
 - [ ] Verify the Search Console property.
 - [ ] Submit the sitemap.
